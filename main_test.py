@@ -7,6 +7,10 @@ class PositivityTest(unittest.TestCase):
   def test_cast_to_lower(self):
     p = Positivity()
     self.assertEqual(p.cast_to_lower('Hola'), 'hola')
+
+  def test_cast_to_lower_error(self):
+    p = Positivity()
+    self.assertRaises(AttributeError, p.cast_to_lower, 55)
   
   def test_clear_text(self):
     p = Positivity()
